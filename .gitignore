@@ -7,6 +7,7 @@
 .terraform
 .terraform.tfstate.lock.info
 
+**/.vscode
 **/.idea
 **/*.iml
 
