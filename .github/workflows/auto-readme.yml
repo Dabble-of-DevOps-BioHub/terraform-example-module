@@ -18,7 +18,7 @@ jobs:
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       run: |
-        wget https://raw.githubusercontent.com/Dabble-of-DevOps-BioHub/biohub-info/master/docs/README.md.gotmpl -O /tmp/README.md.gotmpl
+        wget https://raw.githubusercontent.com/dabble-of-devops-bioanalyze/biohub-info/master/docs/README.md.gotmpl -O /tmp/README.md.gotmpl
         make README_TEMPLATE_FILE=/tmp/README.md.gotmpl BUILD_HARNESS_PATH=/build-harness PACKAGES_PREFER_HOST=true -f /build-harness/templates/Makefile.build-harness readme 
 
         if git diff --no-patch --exit-code context.tf; then
@@ -39,7 +39,7 @@ jobs:
         title: Update context.tf
         body: |-
           ## what
-          This is an auto-generated PR that updates the `README.md` file to the latest version from `Dabble-of-DevOps-BioHub/biohub-info`
+          This is an auto-generated PR that updates the `README.md` file to the latest version from `dabble-of-devops-bioanalyze/biohub-info`
 
           ## why
           To support all the changes in the main README 

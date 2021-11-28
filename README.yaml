@@ -1,11 +1,12 @@
 ---
 #
 # This is the canonical configuration for the `README.md`
-# Run `make readme` to rebuild the `README.md`
+# Run `make custom-readme` to rebuild the `README.md`
+# requires docker
 #
 
 # Name of this project
-name: terraform-aws-eks-jupyterhub
+name: Terraform Github Project Template 
 
 # Logo for this project
 #logo: docs/logo.png
@@ -20,22 +21,22 @@ copyrights:
     year: "2020"
 
 # Canonical GitHub repo
-github_repo: dabble-of-devops-biodeploy/terraform-aws-eks-jupyterhub
+github_repo: dabble-of-devops-bioanalyze/terraform-example-module
 
 # Badges to display
 badges:
   - name: "Latest Release"
-    image: "https://img.shields.io/github/release/cloudposse/terraform-example-module.svg"
-    url: "https://github.com/cloudposse/terraform-example-module/releases/latest"
+    image: "https://img.shields.io/github/release/dabble-of-devops-bioanalyze/terraform-example-module.svg"
+    url: "https://github.com/dabble-of-devops-bioanalyze/terraform-example-module/releases/latest"
   - name: "Discourse Forum"
-    image: "https://img.shields.io/discourse/https/ask.sweetops.com/posts.svg"
-    url: "https://ask.sweetops.com/"
+    image: "https://img.shields.io/discourse/https/discourse.bioanalyze.io/posts.svg"
+    url: "https://discourse.bioanalyze.io"
 
 # List any related terraform modules that this module may be used with or that this module depends on.
 related:
   - name: terraform-aws-eks-autoscaling
     description: Terraform module to provision an Autoscaling EKS Cluster. Acts as a wrapper around cloudposse/terraform-aws-eks-cluster and cloudposse/terraform-aws-eks-node-groups
-    url: https://github.com/dabble-of-devops-biodeploy/terraform-aws-eks-autoscaling
+    url: https://github.com/dabble-of-devops-bioanalyze/terraform-aws-eks-autoscaling
   - name: terraform-aws-eks-cluster
     description: Terraform module to deploy an AWS EKS Cluster.
     url: https://github.com/cloudposse/terraform-aws-eks-workers
@@ -77,7 +78,9 @@ related:
 
 # Short description of this project
 description: |
-  Terraform module to deploy a multiuser Jupyterhub + Dask Cluster on an existing EKS cluster using the DaskHub helm chart. It deploys the DaskHub Helm chart, and optionally configures SSL for you if you are using a domain name on AWS hosted with Route53.
+ This is a GitHub project template. To get started using this structure click the 'Use this Template' button on the main github repo page.
+
+ Update the README.yaml to reflect this project. 
 
 # List any resources helpful for someone to get started. For example, link to the hashicorp documentation or AWS documentation.
 references:
@@ -108,7 +111,7 @@ usage: |-
 
   ```hcl
   module "eks" {
-    source = "dabble-of-devops-biodeploy/eks-jupyterhub/aws"
+    source = "dabble-of-devops-bioanalyze/eks-jupyterhub/aws"
 
     region = var.region
     vpc_id = var.vpc_id
@@ -124,7 +127,7 @@ usage: |-
 # Example usage
 examples: |-
   Here is an example of using this module:
-  - [`examples/complete`](https://github.com/dabble-of-devops-biodeploy/terraform-aws-eks-jupyterhub/) - complete example of using this module
+  - [`examples/complete`](https://github.com/dabble-of-devops-bioanalyze/terraform-aws-eks-jupyterhub/) - complete example of using this module
 
 # How to get started quickly
 #quickstart: |-
