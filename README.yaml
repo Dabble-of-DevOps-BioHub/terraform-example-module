@@ -82,6 +82,8 @@ description: |
 
  Update the README.yaml to reflect this project. 
 
+ This project wouldn't be possible without open source software. The conventions used in the terraform recipes come from the [CloudPosse](https://github.com/cloudposse/terraform-example-module) group.
+
 # List any resources helpful for someone to get started. For example, link to the hashicorp documentation or AWS documentation.
 references:
   - name: "Terraform Standard Module Structure"
