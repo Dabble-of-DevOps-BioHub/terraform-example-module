@@ -1,5 +1,3 @@
-# {{cookiecutter.docs_data.title}}
-
 ## QuickStart
 
 ```
@@ -13,7 +11,6 @@ Your project name is a concatenation of `["namespace", "environment", "stage", "
 This is a cookicutter template to create Terraform modules based on the [BioAnalyze](https://www.bioanalyze.io) terraform recipe examples.
 
 We use the [CloudPosse](https://github.com/cloudposse/terraform-example-module) as a base, and the [Label](https://github.com/cloudposse/terraform-null-label) module to generate a name.
-
 
 The name is generated as:
 
