@@ -9,6 +9,11 @@
     "project_name": "" ,
     "terraform_variables": {},
     "terraform_state": {},
+    "docs_data": {
+        "github_repo": "",
+        "directory": "",
+        "title": ""
+    },
     "_copy_without_render": [
         "**/.pytest_cache",
         ".pytest_cache",
