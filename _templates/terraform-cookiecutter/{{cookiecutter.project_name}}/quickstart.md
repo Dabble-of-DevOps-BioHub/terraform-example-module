@@ -1,7 +1,9 @@
 ## QuickStart
 
 ```
-cookiecutter {{cookiecutter.docs_data.github_repo}} --directory {{cookiecutter.docs_data.directory}}
+cookiecutter \
+	{{cookiecutter.docs_data.github_repo}} \
+	--directory {{cookiecutter.docs_data.directory}}
 ```
 
 Your project name is a concatenation of `["namespace", "environment", "stage", "name", "attributes"]` with `-` between. You can leave any of them out.
