@@ -8,6 +8,13 @@ DOCKER_IMAGE := dabbleofdevops/terraform:terraform-0.14.0
 help : Makefile
 	@sed -n 's/^##//p' $<
 
+## terraform/shell: drop into a shell
+terraform/init:
+	docker run --rm -it \
+		-v $(shell pwd):/tmp/terraform-module \
+		-w /tmp/terraform-module \
+		$(DOCKER_IMAGE) bash
+
 ## terraform/init: initialize terraform
 terraform/init:
 	docker run --rm -it \
