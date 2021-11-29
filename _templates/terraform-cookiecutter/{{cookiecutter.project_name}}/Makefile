@@ -9,7 +9,7 @@ help : Makefile
 	@sed -n 's/^##//p' $<
 
 ## terraform/shell: drop into a shell
-terraform/init:
+terraform/shell:
 	docker run --rm -it \
 		-v $(shell pwd):/tmp/terraform-module \
 		-w /tmp/terraform-module \
