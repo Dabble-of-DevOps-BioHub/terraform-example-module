@@ -8,6 +8,7 @@
     "delimiter": "-",
     "project_name": "" ,
     "terraform_variables": {},
+    "terraform_hcl": "",
     "terraform_state": {},
     "docs_data": {
         "github_repo": "",
