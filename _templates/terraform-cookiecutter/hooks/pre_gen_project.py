@@ -21,3 +21,9 @@ for l in label_order:
 id_full = delimiter.join(labels)
 
 {{ cookiecutter.update({ "project_name": id_full }) }}
+
+from pprint import pprint
+
+cookiecutter_context = {{ cookiecutter.__dict__ }}
+keys = cookiecutter_context.keys()
+pprint(cookiecutter_context)

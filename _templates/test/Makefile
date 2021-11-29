@@ -6,37 +6,34 @@ DOCKER_IMAGE := dabbleofdevops/terraform:terraform-0.14.0
 
 .PHONY : help
 help : Makefile
-        @sed -n 's/^##//p' $<
+	@sed -n 's/^##//p' $<
 
-
-## terraform/init: initialize terraform 
+## terraform/init: initialize terraform
 terraform/init:
-	docker --rm -it \
+	docker run --rm -it \
 		-v $(shell pwd):/tmp/terraform-module \
-                -w /tmp/terraform-module \
+		-w /tmp/terraform-module \
 		$(DOCKER_IMAGE) bash -c "terraform init"
 
 
-## terraform/refresh: refresh terraform state 
+## terraform/refresh: refresh terraform state
 terraform/refresh:
-        docker --rm -it \
+	docker run --rm -it \
 		-v $(shell pwd):/tmp/terraform-module \
-                -w /tmp/terraform-module \
+		-w /tmp/terraform-module \
 		$(DOCKER_IMAGE) bash -c "terraform refresh"
 
 
-## terraform/apply: apply terraform configuration 
+## terraform/apply: apply terraform configuration
 terraform/apply:
-
-        docker --rm -it \
+	docker run --rm -it \
 		-v $(shell pwd):/tmp/terraform-module \
-                -w /tmp/terraform-module \
+		-w /tmp/terraform-module \
 		$(DOCKER_IMAGE) bash -c "terraform apply"
 
-## terraform/apply/autoapprove: apply terraform configuration 
+## terraform/apply/autoapprove: apply terraform configuration
 terraform/apply/autoapprove:
-
-        docker --rm -it \
+	docker run --rm -it \
 		-v $(shell pwd):/tmp/terraform-module \
-                -w /tmp/terraform-module \
+		-w /tmp/terraform-module \
 		$(DOCKER_IMAGE) bash -c "terraform apply -auto-approve"

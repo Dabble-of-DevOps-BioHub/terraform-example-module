@@ -6,7 +6,7 @@
 #
 
 # Name of this project
-name: Terraform Github Project Template 
+name: Terraform Github Project Template
 
 # Logo for this project
 #logo: docs/logo.png
@@ -80,7 +80,7 @@ related:
 description: |
  This is a GitHub project template. To get started using this structure click the 'Use this Template' button on the main github repo page.
 
- Update the README.yaml to reflect this project. 
+ Update the README.yaml to reflect this project.
 
  This project wouldn't be possible without open source software. The conventions used in the terraform recipes come from the [CloudPosse](https://github.com/cloudposse/terraform-example-module) group.
 
