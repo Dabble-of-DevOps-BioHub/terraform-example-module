@@ -1,5 +1,9 @@
 ## QuickStart
 
+```{note}
+Using the BioAnalyze project templates assumes some familiarity with using a terminal, configuration formats, and Makefiles.
+```
+
 Run the cookiecutter command to generate a project template.
 
 Your project name is a concatenation of `["namespace", "environment", "stage", "name", "attributes"]` with `-` between. You can leave any of them out.
@@ -40,6 +44,8 @@ If that is the case create a `config.json` file and feed that to cookiecutter. A
 }
 ```
 
+#### From the CLI
+
 Run cookiecutter with your supplied config and use the suppress user input options.
 
 ```bash
@@ -50,9 +56,13 @@ cookiecutter \
     --no-input
 ```
 
+#### From a Python Console
+
 Or from a python script or console:
 
 ```python
+from cookiecutter.main import cookiecutter
+
 cookiecutter({{cookiecutter.docs_data.github_repo}},
         directory={{cookiecutter.docs_data.directory}},
         no_input=True,
@@ -80,9 +90,12 @@ Or:
 cp terraform.example.tfvars terraform.tfvars.json
 ```
 
-
 ```{warning}
 Make sure to use only one file, either the `tfvars` or the `tfvars.json`. Using both will make the computer lose it's mind.
+```
+
+```{note}
+This quickstart is shared among many modules. For individual tips and tricks please see the documentation for that module.
 ```
 
 (terraform-module-naming-convention)=
