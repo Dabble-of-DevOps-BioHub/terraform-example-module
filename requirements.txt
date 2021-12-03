@@ -2,3 +2,6 @@ pytest
 pandas
 numpy
 jupyter-book>0.12
+hiyapyco
+ruamel.yaml
+pytest
