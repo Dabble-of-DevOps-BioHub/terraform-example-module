@@ -21,6 +21,7 @@ docker-run:
 		cloudposse/build-harness:slim-latest bash 
 
 custom-init:
+	$(MAKE) download-readme
 	docker run -it -v "$(shell pwd):/tmp/terraform-module" \
 		-e README_TEMPLATE_FILE=/tmp/terraform-module/README.md.gotmpl \
 		-w /tmp/terraform-module \
