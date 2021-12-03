@@ -13,6 +13,7 @@ download/readme:
 	wget https://raw.githubusercontent.com/dabble-of-devops-bioanalyze/biohub-info/master/docs/README.md.gotmpl -O ./README.md.gotmpl
 
 docker/shell:
+	$(MAKE) clean
 	docker run -it -v "$(shell pwd):/tmp/terraform-module" \
 		-e README_TEMPLATE_FILE=/tmp/terraform-module/README.md.gotmpl \
 		-w /tmp/terraform-module \
@@ -21,13 +22,11 @@ docker/shell:
 
 docker/lint:
 	docker run -it -v "$(shell pwd):/tmp/terraform-module" \
-		-e README_TEMPLATE_FILE=/tmp/terraform-module/README.md.gotmpl \
 		-w /tmp/terraform-module \
 		cloudposse/build-harness:slim-latest terraform/lint
 
 docker/init:
 	docker run -it -v "$(shell pwd):/tmp/terraform-module" \
-		-e README_TEMPLATE_FILE=/tmp/terraform-module/README.md.gotmpl \
 		-w /tmp/terraform-module \
 		cloudposse/build-harness:slim-latest init
 
