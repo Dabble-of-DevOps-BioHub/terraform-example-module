@@ -2,7 +2,6 @@ import subprocess
 from pathlib import Path
 from copy import deepcopy
 import os
-import urllib
 import formic
 import re
 import glob
