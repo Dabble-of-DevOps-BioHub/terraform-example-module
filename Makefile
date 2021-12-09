@@ -8,6 +8,8 @@ export README_DEPS ?= docs/targets.md docs/terraform.md
 ## Lint terraform code
 lint:
 	$(SELF) terraform/install terraform/get-modules terraform/get-plugins terraform/lint terraform/validate
+	# Make sure we don't have any root!
+	grep -nri source * |grep = | grep root && echo "Found root module. Abort"; exit 1
 
 download-readme:
 	wget https://raw.githubusercontent.com/dabble-of-devops-bioanalyze/biohub-info/master/docs/README.md.gotmpl -O ./README.md.gotmpl
@@ -27,6 +29,7 @@ custom-init:
 		cloudposse/build-harness:slim-latest init
 
 custom-readme:
+	$(MAKE) lint
 	$(MAKE) download-readme
 	$(MAKE) custom-init
 	docker run -it -v "$(shell pwd):/tmp/terraform-module" \
